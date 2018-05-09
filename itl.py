@@ -4,57 +4,55 @@ import os.path
 import xml.sax.handler
 
 
-FROM_VALUE = {
+CONV = {
     'integer': int,
     'string': lambda s: s,
     'date': lambda s: datetime.datetime.strptime(s, '%Y-%m-%dT%H:%M:%SZ'),
+    'true': lambda _: True,
+    'false': lambda _: False,
 }
 
 
 class Handler(xml.sax.handler.ContentHandler):
     def __init__(self):
         self.songs = []
-        self._in_key = False
-        self._in_value = None
-        self._attr = None
-        self._in_dict = 0
-        self._in_array = 0
+        self._depths = {'array': 0, 'dict': 0}
+        self._in_key, self._in_val = False, False
+        self._key, self._val = '', ''
 
     def characters(self, content):
         if self._in_key:
-            self._attr = content
-            self._in_key = False
-        elif self._in_value:
-            self.songs[-1][self._attr] = FROM_VALUE[self._in_value](content)
-            self._in_value = None
-            self._attr = None
+            self._key += content
+        elif self._in_val:
+            self._val += content
 
-    def startElement(self, name, attrs):
-        if name == 'dict':
-            self._in_dict += 1
-        elif name == 'array':
-            self._in_array += 1
-        elif self._in_array:
+    def startElement(self, name, _):
+        if name in self._depths:
+            self._depths[name] += 1
+        elif self._depths['array']:
             return
-        elif name == 'key' and self._in_dict == 2:
+        elif name == 'key' and self._depths['dict'] == 2:
             self.songs.append({})
-        elif name == 'key' and self._in_dict == 3:
+        elif name == 'key' and self._depths['dict'] == 3:
             self._in_key = True
-        elif name in {'integer', 'date', 'string'} and self._in_dict == 3:
-            self._in_value = name
+        elif name in CONV and self._depths['dict'] == 3:
+            self._in_val = True
 
     def endElement(self, name):
-        if name == 'dict':
-            self._in_dict -= 1
-        elif name == 'array':
-            self._in_array -= 1
+        if name in self._depths:
+            self._depths[name] -= 1
+        elif self._in_key:
+            self._in_key = False
+        elif self._in_val:
+            self._in_val = False
+            self.songs[-1][self._key] = CONV[name](self._val)
+            self._key, self._val = '', ''
 
 
 def main(argv=None):
     parser = argparse.ArgumentParser()
     parser.add_argument(
         '--library-xml',
-        # TODO: is this true on windows?
         default=os.path.expanduser('~/Music/iTunes/iTunes Music Library.xml'),
     )
     args = parser.parse_args(argv)
