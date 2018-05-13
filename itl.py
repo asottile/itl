@@ -114,13 +114,13 @@ def main(argv=None):
     print('Top songs (by count)')
     print('=' * 79)
     for i, ((artist, song), n) in enumerate(plays_by_song.most_common(25), 1):
-        print(f'{i}. {song} by {artist}: {n}')
+        print(f'{i}. [{artist}] {song}: {n}')
 
     print('=' * 79)
     print('Top songs (by play time)')
     print('=' * 79)
     for i, ((artist, song), t) in enumerate(time_by_song.most_common(25), 1):
-        print(f'{i}. {song} by {artist}: {human_time(t)}')
+        print(f'{i}. [{artist}] {song}: {human_time(t)}')
 
 
 if __name__ == '__main__':
