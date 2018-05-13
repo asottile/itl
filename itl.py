@@ -1,4 +1,5 @@
 import argparse
+import collections
 import datetime
 import os.path
 import xml.sax.handler
@@ -49,6 +50,39 @@ class Handler(xml.sax.handler.ContentHandler):
             self._key, self._val = '', ''
 
 
+def get_songs(filename):
+    handler = Handler()
+    with open(filename) as f:
+        parser = xml.sax.make_parser()
+        parser.setContentHandler(handler)
+        parser.setFeature(xml.sax.handler.feature_external_ges, False)
+        parser.parse(f)
+    return handler.songs
+
+
+def _ngettext(n, s, p):
+    if n == 1:
+        return s.format(n=n)
+    else:
+        return p.format(n=n)
+
+
+def human_time(rest):
+    days, rest = divmod(rest, 60 * 60 * 24)
+    hours, rest = divmod(rest, 60 * 60)
+    minutes, seconds = divmod(rest, 60)
+    ret = []
+    if days:
+        ret.append(_ngettext(days, '{n} Day', '{n} Days'))
+    if hours:
+        ret.append(_ngettext(hours, '{n} Hour', '{n} Hours'))
+    if minutes:
+        ret.append(_ngettext(minutes, '{n} Minute', '{n} Minutes'))
+    if seconds:
+        ret.append(_ngettext(seconds, '{n} Second', '{n} Seconds'))
+    return ', '.join(ret)
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -57,12 +91,36 @@ def main(argv=None):
     )
     args = parser.parse_args(argv)
 
-    handler = Handler()
-    with open(args.library_xml) as f:
-        parser = xml.sax.make_parser()
-        parser.setContentHandler(handler)
-        parser.setFeature(xml.sax.handler.feature_external_ges, False)
-        parser.parse(f)
+    time_by_artist = collections.Counter()
+    time_by_song = collections.Counter()
+    plays_by_song = collections.Counter()
+    for song in get_songs(args.library_xml):
+        song_count = song.get('Play Count', 0)
+        song_time = song['Total Time'] * song_count // 1000
+        time_by_artist[song['Artist']] += song_time
+        time_by_song[(song['Artist'], song['Name'])] += song_time
+        plays_by_song[(song['Artist'], song['Name'])] += song_count
+
+    print('=' * 79)
+    print(f'Total listening time: {human_time(sum(time_by_artist.values()))}')
+
+    print('=' * 79)
+    print('Top artists (by play time)')
+    print('=' * 79)
+    for i, (artist, t) in enumerate(time_by_artist.most_common(10), 1):
+        print(f'{i}. {artist}: {human_time(t)}')
+
+    print('=' * 79)
+    print('Top songs (by count)')
+    print('=' * 79)
+    for i, ((artist, song), n) in enumerate(plays_by_song.most_common(25), 1):
+        print(f'{i}. {song} by {artist}: {n}')
+
+    print('=' * 79)
+    print('Top songs (by play time)')
+    print('=' * 79)
+    for i, ((artist, song), t) in enumerate(time_by_song.most_common(25), 1):
+        print(f'{i}. {song} by {artist}: {human_time(t)}')
 
 
 if __name__ == '__main__':
