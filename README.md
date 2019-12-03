@@ -11,74 +11,74 @@ Here's the output for my library:
 ```console
 $ python itl.py
 ===============================================================================
-Total listening time: 346 Days, 8 Hours, 46 Minutes, 3 Seconds
+Total listening time: 409 Days, 2 Hours, 38 Minutes, 51 Seconds
 ===============================================================================
 Top artists (by play time)
 ===============================================================================
-1. The All-American Rejects: 58 Days, 16 Hours, 3 Minutes, 32 Seconds
-2. Yellowcard: 41 Days, 22 Hours, 45 Minutes, 14 Seconds
-3. Hollywood Undead: 32 Days, 10 Hours, 25 Minutes, 59 Seconds
-4. Anberlin: 31 Days, 9 Hours, 28 Minutes, 7 Seconds
-5. twenty one pilots: 28 Days, 9 Hours, 42 Minutes, 28 Seconds
-6. Relient K: 25 Days, 8 Hours, 9 Minutes, 53 Seconds
-7. blink-182: 24 Days, 21 Hours, 11 Minutes, 4 Seconds
-8. Manchester Orchestra: 13 Days, 3 Hours, 34 Minutes, 35 Seconds
-9. Taking Back Sunday: 8 Days, 7 Hours, 3 Minutes, 22 Seconds
-10. Owl City: 5 Days, 19 Hours, 20 Minutes, 3 Seconds
+1. The All-American Rejects: 65 Days, 10 Hours, 58 Minutes, 16 Seconds
+2. Yellowcard: 49 Days, 23 Hours, 37 Minutes, 13 Seconds
+3. Hollywood Undead: 37 Days, 59 Minutes, 10 Seconds
+4. twenty one pilots: 34 Days, 21 Hours, 26 Minutes, 5 Seconds
+5. Anberlin: 34 Days, 20 Hours, 2 Minutes, 6 Seconds
+6. blink-182: 30 Days, 23 Hours, 57 Minutes, 14 Seconds
+7. Relient K: 30 Days, 3 Hours, 21 Minutes, 41 Seconds
+8. Manchester Orchestra: 16 Days, 11 Minutes, 36 Seconds
+9. Taking Back Sunday: 8 Days, 21 Hours, 56 Minutes, 1 Second
+10. Dashboard Confessional: 7 Days, 11 Hours, 43 Minutes, 12 Seconds
 ===============================================================================
 Top songs (by count)
 ===============================================================================
-1. [The All-American Rejects] Sierra's Song: 444
-2. [Hollywood Undead] This Love, This Hate: 442
-3. [The All-American Rejects] One More Sad Song: 428
-4. [The All-American Rejects] Don't Leave Me: 412
-5. [Hollywood Undead] Coming Back Down: 408
-6. [The All-American Rejects] Drive Away: 402
-7. [The All-American Rejects] I Wanna: 395
-8. [blink-182] Down: 394
-9. [The All-American Rejects] Too Far Gone: 386
-10. [Hollywood Undead] No 5: 384
-11. [The All-American Rejects] The Cigarette Song: 383
-12. [The All-American Rejects] Bite Back (B-Side): 381
-13. [The All-American Rejects] The Last Song: 378
-14. [The All-American Rejects] It Ends Tonight: 377
-15. [The All-American Rejects] Fallin' Apart: 375
-16. [Relient K] Which To Bury, Us Or The Hatchet: 375
-17. [The All-American Rejects] Gives You Hell: 370
-18. [Anberlin] Breaking: 365
-19. [Anberlin] Adelaide: 364
-20. [blink-182] Feelin' this: 362
-21. [The All-American Rejects] Damn Girl: 361
-22. [Hollywood Undead] City: 361
-23. [Linkin Park] Waiting For The End: 361
-24. [The All-American Rejects] Stab My Back: 360
-25. [Taking Back Sunday] This Is All Now: 360
+1. [The All-American Rejects] One More Sad Song: 484
+2. [The All-American Rejects] Sierra's Song: 480
+3. [Hollywood Undead] This Love, This Hate: 480
+4. [The All-American Rejects] Drive Away: 464
+5. [The All-American Rejects] Don't Leave Me: 458
+6. [The All-American Rejects] Too Far Gone: 434
+7. [The All-American Rejects] I Wanna: 432
+8. [blink-182] Down: 430
+9. [The All-American Rejects] The Cigarette Song: 426
+10. [Hollywood Undead] Coming Back Down: 426
+11. [Relient K] Which To Bury, Us Or The Hatchet: 421
+12. [The All-American Rejects] The Last Song: 420
+13. [The All-American Rejects] Bite Back (B-Side): 416
+14. [The All-American Rejects] Fallin' Apart: 415
+15. [Hollywood Undead] No 5: 403
+16. [Hollywood Undead] City: 401
+17. [The All-American Rejects] Gives You Hell: 398
+18. [blink-182] Feelin' this: 397
+19. [The All-American Rejects] It Ends Tonight: 396
+20. [Hollywood Undead] Pain (Bonus Track): 393
+21. [The All-American Rejects] Damn Girl: 392
+22. [The All-American Rejects] Can't Take It: 390
+23. [Linkin Park] Waiting For The End: 388
+24. [Taking Back Sunday] This Is All Now: 388
+25. [Anberlin] Adelaide: 387
 ===============================================================================
 Top songs (by play time)
 ===============================================================================
-1. [Anberlin] *(fin): 1 Day, 15 Hours, 29 Minutes, 5 Seconds
-2. [The All-American Rejects] The Last Song: 1 Day, 7 Hours, 32 Minutes, 44 Seconds
-3. [The All-American Rejects] Sierra's Song: 1 Day, 7 Hours, 20 Minutes, 59 Seconds
-4. [Anberlin] Depraved: 1 Day, 5 Hours, 41 Minutes, 35 Seconds
-5. [The All-American Rejects] Bite Back (B-Side): 1 Day, 5 Hours, 29 Minutes, 44 Seconds
-6. [Relient K] When I Go Down: 1 Day, 5 Hours, 25 Minutes, 45 Seconds
-7. [Hollywood Undead] This Love, This Hate: 1 Day, 5 Hours, 7 Minutes, 18 Seconds
-8. [The All-American Rejects] Drown Next to Me: 1 Day, 4 Hours, 44 Minutes, 55 Seconds
-9. [Anberlin] Art Of War: 1 Day, 3 Hours, 35 Minutes, 9 Seconds
-10. [Relient K] Which To Bury, Us Or The Hatchet: 1 Day, 2 Hours, 15 Minutes, 10 Seconds
-11. [The All-American Rejects] Too Far Gone: 1 Day, 2 Hours, 12 Minutes, 36 Seconds
-12. [30 Seconds to Mars] Kings and Queens: 1 Day, 2 Hours, 4 Minutes, 9 Seconds
-13. [Anberlin] You Belong Here: 1 Day, 1 Hour, 46 Minutes, 36 Seconds
-14. [The All-American Rejects] It Ends Tonight: 1 Day, 1 Hour, 38 Minutes, 19 Seconds
-15. [Taking Back Sunday] This Is All Now: 1 Day, 21 Minutes, 2 Seconds
-16. [The All-American Rejects] Don't Leave Me: 1 Day, 16 Minutes, 3 Seconds
-17. [Sum 41] Walking Disaster: 1 Day, 10 Minutes, 57 Seconds
-18. [Hollywood Undead] Pour Me: 1 Day, 2 Minutes, 3 Seconds
-19. [The All-American Rejects] When the Wind Blows: 23 Hours, 58 Minutes, 1 Second
-20. [The All-American Rejects] Back to Me: 23 Hours, 49 Minutes, 32 Seconds
-21. [blink-182] Always: 23 Hours, 45 Minutes, 46 Seconds
-22. [The All-American Rejects] Dance Inside: 23 Hours, 33 Minutes, 56 Seconds
-23. [The All-American Rejects] Another Heart Calls: 23 Hours, 23 Minutes, 31 Seconds
-24. [The All-American Rejects] Eyelash Wishes [*]: 23 Hours, 15 Minutes, 51 Seconds
-25. [Linkin Park] Waiting For The End: 23 Hours, 13 Minutes, 56 Seconds
+1. [Anberlin] *(fin): 1 Day, 17 Hours, 25 Minutes, 18 Seconds
+2. [The All-American Rejects] The Last Song: 1 Day, 11 Hours, 3 Minutes, 2 Seconds
+3. [The All-American Rejects] Sierra's Song: 1 Day, 9 Hours, 53 Minutes, 29 Seconds
+4. [Relient K] When I Go Down: 1 Day, 9 Hours, 20 Minutes, 44 Seconds
+5. [The All-American Rejects] Bite Back (B-Side): 1 Day, 8 Hours, 12 Minutes, 19 Seconds
+6. [Anberlin] Depraved: 1 Day, 7 Hours, 40 Minutes, 43 Seconds
+7. [Hollywood Undead] This Love, This Hate: 1 Day, 7 Hours, 37 Minutes, 32 Seconds
+8. [The All-American Rejects] Drown Next to Me: 1 Day, 6 Hours, 55 Minutes, 29 Seconds
+9. [Relient K] Which To Bury, Us Or The Hatchet: 1 Day, 5 Hours, 28 Minutes, 24 Seconds
+10. [The All-American Rejects] Too Far Gone: 1 Day, 5 Hours, 27 Minutes, 54 Seconds
+11. [Anberlin] Art Of War: 1 Day, 5 Hours, 14 Minutes, 28 Seconds
+12. [30 Seconds to Mars] Kings and Queens: 1 Day, 4 Hours, 52 Minutes, 9 Seconds
+13. [Anberlin] You Belong Here: 1 Day, 4 Hours, 10 Minutes, 47 Seconds
+14. [The All-American Rejects] Don't Leave Me: 1 Day, 3 Hours, 2 Minutes, 43 Seconds
+15. [The All-American Rejects] It Ends Tonight: 1 Day, 2 Hours, 55 Minutes, 51 Seconds
+16. [Sum 41] Walking Disaster: 1 Day, 2 Hours, 38 Minutes, 54 Seconds
+17. [Taking Back Sunday] This Is All Now: 1 Day, 2 Hours, 14 Minutes, 40 Seconds
+18. [The All-American Rejects] Back to Me: 1 Day, 2 Hours, 8 Minutes, 28 Seconds
+19. [blink-182] Always: 1 Day, 2 Hours, 7 Minutes, 29 Seconds
+20. [Hollywood Undead] Pour Me: 1 Day, 2 Hours, 3 Minutes, 34 Seconds
+21. [The All-American Rejects] When the Wind Blows: 1 Day, 2 Hours, 24 Seconds
+22. [Manchester Orchestra] The River: 1 Day, 1 Hour, 53 Minutes, 21 Seconds
+23. [The All-American Rejects] The Cigarette Song: 1 Day, 1 Hour, 30 Minutes, 18 Seconds
+24. [The All-American Rejects] Another Heart Calls: 1 Day, 1 Hour, 19 Minutes, 6 Seconds
+25. [The All-American Rejects] Eyelash Wishes [*]: 1 Day, 1 Hour, 16 Minutes, 19 Seconds
 ```
