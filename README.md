@@ -1,4 +1,4 @@
-[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/asottile/itl/master.svg)](https://results.pre-commit.ci/latest/github/asottile/itl/master)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/asottile/itl/main.svg)](https://results.pre-commit.ci/latest/github/asottile/itl/main)
 
 itl
 ===
